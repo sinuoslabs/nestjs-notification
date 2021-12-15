@@ -9,7 +9,7 @@ export interface NestJsNotify {
    * Get the channels the notification should broadcast on.
    * @returns {Type<INestjsNotifyChannel>[]} array
    */
-  broadcastOn(): Type<INestjsNotifyChannel>[];
+  sendToChannels(): Type<INestjsNotifyChannel>[];
 
   /**
    * Get the json representation of the notification.

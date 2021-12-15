@@ -1,7 +1,3 @@
-/**
- * @interface NestjsNotifyModuleOptionsFactory
- * @property createNestjsNotifyOptions()
- */
 import { ModuleMetadata, Provider, Type } from '@nestjs/common';
 
 /**
@@ -37,4 +33,6 @@ export interface NestjsNotifyModuleAsyncOptions
 /**
  * @interface NestjsNotifyModuleOptions
  */
-export interface NestjsNotifyModuleOptions {}
+export interface NestjsNotifyModuleOptions {
+  queue?: any;
+}

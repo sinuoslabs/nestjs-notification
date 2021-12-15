@@ -1,4 +1,5 @@
-src/**/*.test.ts
-src/**/files/**
+lib/**/*.test.ts
+lib/**/files/**
+lib/channels/**
 test/**
 *.spec.ts
