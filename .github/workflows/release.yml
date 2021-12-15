@@ -1,0 +1,25 @@
+name: RELEASER
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  Realeaser:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v2
+
+      - name: Use NodeJS v16
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Create new release
+        env:
+          GH_TOKEN: ${{secrets.GH_TOKEN}}
+        run: npx semantic-release
