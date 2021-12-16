@@ -1,6 +1,6 @@
-import { Injectable } from "@nestjs/common";
-import { INestjsNotifyChannel } from "../../interfaces";
-import { ITelegramChannel } from "./telegram-channel.interface";
+import { Injectable } from '@nestjs/common';
+import { INestjsNotifyChannel } from '../../interfaces';
+import { ITelegramChannel } from './telegram-channel.interface';
 
 @Injectable()
 export class TelegramChannel implements INestjsNotifyChannel {

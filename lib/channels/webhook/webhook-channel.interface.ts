@@ -1,4 +1,4 @@
-import { NestJsNotify } from "../../interfaces";
+import { NestJsNotify } from '../../interfaces';
 
 /**
  * Webhook channel model

@@ -1,4 +1,4 @@
-import { NestJsNotify } from "../../interfaces";
+import { NestJsNotify } from '../../interfaces';
 
 /** Telegram channel model
  * @interface ITelegramChannel

@@ -1,8 +1,7 @@
 {
-  "name": "nestjs-notify",
+  "name": "@sinuos/nestjs-notification",
   "version": "0.0.0",
-  "description": "",
-  "author": "",
+  "description": "NestJS notification based on channel",
   "license": "MIT",
   "keywords": [
     "nest",
@@ -70,9 +69,18 @@
   "lint-staged": {
     "**/*": "pretty-quick --staged"
   },
+  "author": {
+    "name": "Houssene Dao",
+    "email": "dao.houssene@gmail.com",
+    "url": "https://twitter.com/houssenedao"
+  },
+  "homepage": "https://github.com/sinuoslabs/nestjs-notification#readme",
+  "bugs": {
+    "url": "https://github.com/sinuoslabs/nestjs-notification/issues"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/themartiangeeks/nestjs-notify"
+    "url": "https://github.com/sinuoslabs/nestjs-notification"
   },
   "jest": {
     "moduleFileExtensions": [

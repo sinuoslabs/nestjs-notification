@@ -1,8 +1,8 @@
-import { Injectable } from "@nestjs/common";
-import { HttpService } from "@nestjs/axios";
+import { Injectable } from '@nestjs/common';
+import { HttpService } from '@nestjs/axios';
 import { AxiosResponse } from 'axios';
-import { IWebhookChannel } from "./webhook-channel.interface";
-import { INestjsNotifyChannel } from "../../interfaces";
+import { IWebhookChannel } from './webhook-channel.interface';
+import { INestjsNotifyChannel } from '../../interfaces';
 
 @Injectable()
 export class WebhookChannel implements INestjsNotifyChannel {
@@ -18,7 +18,9 @@ export class WebhookChannel implements INestjsNotifyChannel {
    * @param {IWebhookChannel} notification
    * @return Promise<AxiosResponse<any>>
    */
-  public async send(notification: IWebhookChannel): Promise<AxiosResponse<any>> {
+  public async send(
+    notification: IWebhookChannel,
+  ): Promise<AxiosResponse<any>> {
     return Promise.resolve(undefined);
   }
 }

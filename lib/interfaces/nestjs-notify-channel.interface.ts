@@ -1,4 +1,4 @@
-import { NestJsNotify } from "./nestjs-notify.interface";
+import { NestJsNotify } from './nestjs-notify.interface';
 
 /**
  * @interface INestjsNotifyChannel

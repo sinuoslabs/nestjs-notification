@@ -1,5 +1,5 @@
-import { Injectable } from "@nestjs/common";
-import { INestjsNotifyChannel } from "../../interfaces";
+import { Injectable } from '@nestjs/common';
+import { INestjsNotifyChannel } from '../../interfaces';
 
 @Injectable()
 export class SendgridChannel implements INestjsNotifyChannel {

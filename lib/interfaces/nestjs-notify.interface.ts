@@ -1,5 +1,5 @@
 import { Type } from '@nestjs/common';
-import { INestjsNotifyChannel } from "./nestjs-notify-channel.interface";
+import { INestjsNotifyChannel } from './nestjs-notify-channel.interface';
 
 /**
  * @interface NestJsNotify

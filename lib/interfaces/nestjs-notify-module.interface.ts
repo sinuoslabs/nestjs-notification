@@ -2,14 +2,16 @@
  * @interface NestjsNotifyModuleOptionsFactory
  * @property createNestjsNotifyOptions()
  */
-import { ModuleMetadata, Provider, Type } from "@nestjs/common";
+import { ModuleMetadata, Provider, Type } from '@nestjs/common';
 
 /**
  * @interface NestjsNotifyModuleOptionsFactory
  * @property createNestjsNotifyOptions()
  */
 export interface NestjsNotifyModuleOptionsFactory {
-  createNestjsNotifyOptions(): Promise<NestjsNotifyModuleOptions> | NestjsNotifyModuleOptions;
+  createNestjsNotifyOptions():
+    | Promise<NestjsNotifyModuleOptions>
+    | NestjsNotifyModuleOptions;
 }
 
 /**
