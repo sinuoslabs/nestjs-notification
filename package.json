@@ -1,6 +1,6 @@
 {
   "name": "@sinuos/nestjs-notification",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "NestJS notification based on channel",
   "license": "MIT",
   "keywords": [
