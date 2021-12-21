@@ -1,6 +1,6 @@
 # Contributing to Nest
 
-We would love for you to contribute to NestJS Notify and help make it even better than it is
+We would love for you to contribute to NestJS Notification and help make it even better than it is
 today! As a contributor, here are the guidelines we would like you to follow:
 
 - [Code of Conduct](#coc)
