@@ -9,7 +9,20 @@
     "type-enum": [
       2,
       "always",
-      ["build", "chore", "ci", "docs", "feat", "fix", "perf", "refactor", "style", "test", "revert"]
+      [
+        "build",
+        "chore",
+        "ci",
+        "docs",
+        "feat",
+        "fix",
+        "perf",
+        "refactor",
+        "style",
+        "test",
+        "revert",
+        "BREAKING CHANGE"
+      ]
     ]
   }
 }
