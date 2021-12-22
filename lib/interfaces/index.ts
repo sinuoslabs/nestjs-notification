@@ -1,3 +1,3 @@
-export * from './nestjs-notify.interface';
-export * from './nestjs-notify-module.interface';
-export * from './nestjs-notify-channel.interface';
+export * from './nestjs-notification.interface';
+export * from './nestjs-notification-module.interface';
+export * from './nestjs-notification-channel.interface';

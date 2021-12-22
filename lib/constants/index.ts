@@ -1,1 +1,1 @@
-export * from './nestjs-notify-provider.constant';
+export * from './nestjs-notification-provider.constant';
