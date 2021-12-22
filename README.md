@@ -24,7 +24,7 @@ $ npm i @sinuos/nestjs-notification
 ### Declare module
 
 ```typescript
-import { NestjsNotificationModule } from '@sinuos/nestjs-notify.module';
+import { NestjsNotificationModule } from '@sinuos/nestjs-notification.module';
 
 @Module({
   imports: [NestjsNotificationModule.register()],
@@ -36,10 +36,10 @@ export class AppModule {}
 
 ```typescript
 import { Injectable } from '@nestjs/common';
-import { INestjsNotifyChannel } from '@sinuos/nestjs-notify.service';
+import { INestjsNotificationChannel } from '@sinuos/nestjs-notification.service';
 
 @Injectable()
-export class NexmoChannel implements INestjsNotifyChannel {
+export class NexmoChannel implements INestjsNotificationChannel {
   constructor() {}
 
   send(): Promise<any> {
@@ -51,9 +51,9 @@ export class NexmoChannel implements INestjsNotifyChannel {
 ### Notification
 
 ```typescript
-import { NestJsNotify } from '@sinuos/nestjs-notify.service';
+import { NestJsNotification } from '@sinuos/nestjs-notification.service';
 
-export class InvoicPaidNotification implements NestJsNotify {
+export class InvoicPaidNotification implements NestJsNotification {
   public sendToChannels() {
     return [NexmoChannel];
   }
@@ -68,15 +68,15 @@ export class InvoicPaidNotification implements NestJsNotify {
 
 ```typescript
 import { Injectable } from '@nestjs/common';
-import { NestjsNotificationService } from '@sinuos/nestjs-notify.service';
+import { NestjsNotificationService } from '@sinuos/nestjs-notification.service';
 
 @Injectable()
 export class AppService {
-  constructor(private notify: NestjsNotificationService) {}
+  constructor(private notification: NestjsNotificationService) {}
 
-  notify() {
+  notification() {
     const notification = new InvoicePaidNotification();
-    this.notify.send(notification);
+    this.notification.send(notification);
   }
 }
 ```
