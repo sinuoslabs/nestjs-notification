@@ -1,17 +1,17 @@
 import { Type } from '@nestjs/common';
-import { INestjsNotifyChannel } from './nestjs-notify-channel.interface';
+import { INestjsNotificationChannel } from './nestjs-notification-channel.interface';
 
 /**
- * @interface NestJsNotify
+ * @interface NestJsNotification
  * @property sendToChannels()
  * @property toPayload?()
  */
-export interface NestJsNotify {
+export interface NestJsNotification {
   /**
    * Get the channels the notification should broadcast on.
-   * @returns {Type<INestjsNotifyChannel>[]} array
+   * @returns {Type<INestjsNotificationChannel>[]} array
    */
-  sendToChannels(): Type<INestjsNotifyChannel>[];
+  sendToChannels(): Type<INestjsNotificationChannel>[];
 
   /**
    * Get the json representation of the notification.

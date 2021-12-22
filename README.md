@@ -24,10 +24,10 @@ $ npm i @sinuos/nestjs-notification
 ### Declare module
 
 ```typescript
-import { NestjsNotifyModule } from '@sinuos/nestjs-notify.module';
+import { NestjsNotificationModule } from '@sinuos/nestjs-notify.module';
 
 @Module({
-  imports: [NestjsNotifyModule.register()],
+  imports: [NestjsNotificationModule.register()],
 })
 export class AppModule {}
 ```
@@ -68,11 +68,11 @@ export class InvoicPaidNotification implements NestJsNotify {
 
 ```typescript
 import { Injectable } from '@nestjs/common';
-import { NestjsNotifyService } from '@sinuos/nestjs-notify.service';
+import { NestjsNotificationService } from '@sinuos/nestjs-notify.service';
 
 @Injectable()
 export class AppService {
-  constructor(private notify: NestjsNotifyService) {}
+  constructor(private notify: NestjsNotificationService) {}
 
   notify() {
     const notification = new InvoicePaidNotification();
