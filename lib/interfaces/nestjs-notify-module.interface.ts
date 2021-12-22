@@ -27,8 +27,5 @@ export interface NestjsNotifyModuleAsyncOptions extends Pick<ModuleMetadata, 'im
 
 /**
  * @interface NestjsNotifyModuleOptions
- * @property queue
  */
-export interface NestjsNotifyModuleOptions {
-  queue?: any;
-}
+export type NestjsNotifyModuleOptions = null;

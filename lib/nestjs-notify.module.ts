@@ -43,11 +43,7 @@ export class NestjsNotifyModule {
     return {
       module: NestjsNotifyModule,
       imports: options.imports || [],
-      providers: [
-        NestjsNotifyService,
-        notifyProvider,
-        ...this.createAsyncProviders(options),
-      ],
+      providers: [NestjsNotifyService, notifyProvider, ...this.createAsyncProviders(options)],
       exports: [NestjsNotifyService, notifyProvider],
     };
   }
@@ -58,9 +54,7 @@ export class NestjsNotifyModule {
    * @param {NestjsNotifyModuleAsyncOptions} options
    * @return Provider[]
    */
-  private static createAsyncProviders(
-    options: NestjsNotifyModuleAsyncOptions,
-  ): Provider[] {
+  private static createAsyncProviders(options: NestjsNotifyModuleAsyncOptions): Provider[] {
     if (options.useExisting || options.useFactory) {
       return [this.createAsyncConfigProvider(options)];
     } else if (!options.useClass) {
@@ -88,9 +82,7 @@ export class NestjsNotifyModule {
    * @param {NestjsNotifyModuleAsyncOptions} options
    * @return Provider<any>
    */
-  private static createAsyncConfigProvider(
-    options: NestjsNotifyModuleAsyncOptions,
-  ): Provider<any> {
+  private static createAsyncConfigProvider(options: NestjsNotifyModuleAsyncOptions): Provider<any> {
     if (options.useFactory) {
       return {
         provide: NESTJS_NOTIFY_OPTIONS,
@@ -102,9 +94,7 @@ export class NestjsNotifyModule {
     const inject = options.useClass || options.useExisting;
 
     if (!inject) {
-      throw new Error(
-        'Invalid configuration. Must provide useFactory, useClass or useExisting',
-      );
+      throw new Error('Invalid configuration. Must provide useFactory, useClass or useExisting');
     }
 
     return {

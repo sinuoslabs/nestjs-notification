@@ -8,8 +8,7 @@ export class NestjsNotifyService {
    * Resolve the channel needed to send the Notification
    * @param channel
    */
-  private resolveChannel = (channel: Type<INestjsNotifyChannel>) =>
-    this.moduleRef.create(channel);
+  private resolveChannel = (channel: Type<INestjsNotifyChannel>) => this.moduleRef.create(channel);
 
   /**
    * @constructor
