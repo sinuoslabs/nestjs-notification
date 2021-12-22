@@ -5,9 +5,7 @@ import { ModuleMetadata, Provider, Type } from '@nestjs/common';
  * @property createNestjsNotifyOptions()
  */
 export interface NestjsNotifyModuleOptionsFactory {
-  createNestjsNotifyOptions():
-    | Promise<NestjsNotifyModuleOptions>
-    | NestjsNotifyModuleOptions;
+  createNestjsNotifyOptions(): Promise<NestjsNotifyModuleOptions> | NestjsNotifyModuleOptions;
 }
 
 /**
@@ -19,19 +17,17 @@ export interface NestjsNotifyModuleOptionsFactory {
  * @property inject
  * @property extraProviders
  */
-export interface NestjsNotifyModuleAsyncOptions
-  extends Pick<ModuleMetadata, 'imports'> {
+export interface NestjsNotifyModuleAsyncOptions extends Pick<ModuleMetadata, 'imports'> {
   useExisting?: Type<NestjsNotifyModuleOptionsFactory>;
   useClass?: Type<NestjsNotifyModuleOptionsFactory>;
-  useFactory?: (
-    ...args: any[]
-  ) => Promise<NestjsNotifyModuleOptions> | NestjsNotifyModuleOptions;
+  useFactory?: (...args: any[]) => Promise<NestjsNotifyModuleOptions> | NestjsNotifyModuleOptions;
   inject?: any[];
   extraProviders?: Provider[];
 }
 
 /**
  * @interface NestjsNotifyModuleOptions
+ * @property queue
  */
 export interface NestjsNotifyModuleOptions {
   queue?: any;

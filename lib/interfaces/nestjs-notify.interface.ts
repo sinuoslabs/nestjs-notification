@@ -3,6 +3,8 @@ import { INestjsNotifyChannel } from './nestjs-notify-channel.interface';
 
 /**
  * @interface NestJsNotify
+ * @property sendToChannels()
+ * @property toPayload?()
  */
 export interface NestJsNotify {
   /**
@@ -13,7 +15,7 @@ export interface NestJsNotify {
 
   /**
    * Get the json representation of the notification.
-   * @returns json
+   * @returns {Record<string, any>}
    */
   toPayload?(): Record<string, any>;
 }
