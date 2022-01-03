@@ -9,7 +9,7 @@
     {
       "matchPackageNames": ["semantic-release"],
       "semanticCommitType": "build"
-    },
+    }
   ],
   "extends": [
     "config:base"
