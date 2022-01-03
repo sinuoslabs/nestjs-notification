@@ -1,9 +1,16 @@
 {
   "semanticCommits": true,
-  "packageRules": [{
-    "depTypeList": ["devDependencies"],
-    "automerge": true
-  }],
+  "assignees": ["houssenedao", "daohassane"],
+  "packageRules": [
+    {
+      "depTypeList": ["devDependencies"],
+      "automerge": true
+    },
+    {
+      "matchPackageNames": ["semantic-release"],
+      "semanticCommitType": "build"
+    },
+  ],
   "extends": [
     "config:base"
   ]
