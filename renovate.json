@@ -1,9 +1,13 @@
 {
   "semanticCommits": true,
-  "packageRules": [{
-    "depTypeList": ["devDependencies"],
-    "automerge": true
-  }],
+  "packageRules": [
+    {
+      "depTypeList": ["devDependencies"],
+      "automerge": true,
+      "assignAutomerge": true,
+      "addLabels": ["dev-dependency"]
+    }
+  ],
   "extends": [
     "config:base"
   ]
