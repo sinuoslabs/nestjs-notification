@@ -1,14 +1,28 @@
 {
+  "extends": ["config:base"],
   "semanticCommits": true,
+  "ignoreTests": true,
+  "assignAutomerge": true,
+  "automerge": true,
+  "automergeType": "pr",
+  "automergeComment": "bors: r+",
+  "npm": {
+    "stabilityDays": 3
+  },
   "packageRules": [
     {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
+    },
+    {
       "depTypeList": ["devDependencies"],
-      "automerge": true,
-      "assignAutomerge": true,
-      "addLabels": ["dev-dependency"]
+      "addLabels": ["dev-dependency"],
+      "automerge": true
+    },
+    {
+      "matchPackagePrefixes": ["@types/"],
+      "addLabels": ["@types"],
+      "automerge": true
     }
-  ],
-  "extends": [
-    "config:base"
   ]
 }
