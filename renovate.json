@@ -3,26 +3,42 @@
   "semanticCommits": true,
   "ignoreTests": true,
   "assignAutomerge": true,
-  "automerge": true,
   "automergeType": "pr",
-  "automergeComment": "bors: r+",
   "npm": {
     "stabilityDays": 3
   },
   "packageRules": [
     {
-      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
-      "automerge": true
+      "matchPackageNames": ["nestjs"],
+      "matchPackagePatterns": ["^@nestjs/"],
+      "groupName": "nestjs packages",
+      "addLabels": ["nestjs"]
+    },
+    {
+      "depTypeList": ["dependencies"],
+      "groupName": "dependancies",
+      "addLabels": ["dependencies"]
     },
     {
       "depTypeList": ["devDependencies"],
-      "addLabels": ["dev-dependency"],
-      "automerge": true
+      "groupName": "dev dependancies",
+      "automerge": true,
+      "automergeComment": "bors: r+ dev dependancies",
+      "addLabels": ["dev-dependencies"]
+    },
+    {
+      "matchPackagePatterns": ["^eslint"],
+      "groupName": "eslint packages",
+      "automerge": true,
+      "automergeComment": "bors: r+ eslint",
+      "addLabels": ["styles"]
     },
     {
       "matchPackagePrefixes": ["@types/"],
-      "addLabels": ["@types"],
-      "automerge": true
+      "groupName": "@type packages",
+      "automerge": true,
+      "automergeComment": "bors: r+ @types",
+      "addLabels": ["@types"]
     }
   ]
 }
