@@ -31,7 +31,7 @@
     "index.d.ts"
   ],
   "peerDependencies": {
-    "@nestjs/common": "^7.0.0 || ^8.0.0 || ^9.2.1",
+    "@nestjs/common": "^7.0.0 || ^8.0.0 || ^9.2.1 || ^10.0.0",
     "reflect-metadata": "^0.1.12",
     "rxjs": "^6.0.0 || ^7.0.0"
   },
