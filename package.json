@@ -37,13 +37,13 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@commitlint/cli": "20.5.3",
-    "@commitlint/config-angular": "20.5.3",
+    "@commitlint/cli": "21.2.1",
+    "@commitlint/config-angular": "21.2.0",
     "@nestjs/common": "11.1.28",
     "@nestjs/core": "11.1.28",
     "@nestjs/platform-express": "11.1.28",
     "@nestjs/testing": "11.1.28",
-    "@semantic-release/git": "10.0.1",
+    "@semantic-release/git": "11.0.0",
     "@types/jest": "30.0.0",
     "@types/node": "24.10.13",
     "@typescript-eslint/eslint-plugin": "8.65.0",
@@ -54,7 +54,7 @@
     "eslint-plugin-prettier": "5.5.5",
     "husky": "9.1.7",
     "jest": "30.4.2",
-    "lint-staged": "16.4.0",
+    "lint-staged": "17.1.0",
     "prettier": "3.9.5",
     "pretty-quick": "4.2.2",
     "reflect-metadata": "0.2.2",
@@ -62,7 +62,7 @@
     "rxjs": "7.8.2",
     "semantic-release": "25.0.8",
     "ts-jest": "29.4.11",
-    "typescript": "6.0.2"
+    "typescript": "7.0.2"
   },
   "lint-staged": {
     "**/*": "pretty-quick --staged"
